@@ -28,6 +28,28 @@
 		</joint>
 	  </xacro:if>
 
+<!-- COLLISON 
+  <link name="${prefix}collision_box">
+
+  <origin xyz="0 0 0" rpy="0 0 0" />
+  <geometry>
+	 <box size="0.8 0.8 0.8" />
+  </geometry>
+    <collision name="${prefix}collision_box">
+      <geometry>
+        <box size="0.8 0.8 0.8" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="box_joint" type="fixed">
+    <parent link="${prefix}base_link"/>
+    <child link="${prefix}collision_box"/>
+    <origin xyz="0.0 0.0 0.5" rpy="0 0 0"/>
+  </joint> 
+-->
+
+
+
   <!-- BASE_LINK -->
   <link name="${prefix}base_link">
     <inertial>
@@ -62,6 +84,10 @@
   <gazebo reference="${prefix}base_link">
     <material>Gazebo/Black</material>
   </gazebo>
+
+
+
+
 
 
   <!-- CHAPAS INOX TAPAS -->
